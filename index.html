@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Glow Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <header class="header">
+            <div class="header-container">
+                <h1>Glow Beauty</h1>
+
+                <button class="cart-btn" onclick="toggleCart()">
+                    Cart (<span id="cartCount">0</span>)
+                </button>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+
+                <li class="nav-item">
+                    <button onclick="showCategory('all')">All</button>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button onclick="showCategory('makeup')">Makeup</button>
+                    <div class="dropdown-content">
+                        <a onclick="showCategory('foundation')">Foundation</a>
+                        <a onclick="showCategory('lipstick')">Lipstick</a>
+                        <a onclick="showCategory('mascara')">Mascara</a>
+                        <a onclick="showCategory('blush')">Blush</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button onclick="showCategory('skincare')">Skincare</button>
+                    <div class="dropdown-content">
+                        <a onclick="showCategory('cleanser')">Cleanser</a>
+                        <a onclick="showCategory('moisturizer')">Moisturizer</a>
+                        <a onclick="showCategory('sunscreen')">Sunscreen</a>
+                        <a onclick="showCategory('serum')">Serum</a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="products" id="productList"></div>
+
+    </div>
+
+    <div class="cart" id="cartBox">
+
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" onclick="closeCart()">✖</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="total">
+            Total: ₹<span id="totalPrice">0</span>
+        </div>
+
+        <button class="order-btn" onclick="confirmOrder()">
+            Confirm Order
+        </button>
+
+    </div>
+
+    <script src="script.js">
+
+
+
+    </script>
+
+</body>
+
+</html>
